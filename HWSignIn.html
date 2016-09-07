@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Lab - Controls</title>
+    <link rel="stylesheet"
+          href="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css" />
+    <script src="jquery-1.9.1.min.js"></script>
+    <script src="jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+    <style>
+        #swtAgree{
+            width:20em;
+        }
+    </style>
+</head>
+<body>
+    <div data-role="page"><!---->
+        <div data-role="header">
+            <h1>Sign in</h1>
+        </div>
+
+        <div data-role="content">
+            <form name="frmSignIn" method="post" action="#"><!--帳號密碼-->
+                <div data-role="fieldcontain">
+                    <label for="accText">Account:</label>
+                    <input type="text" name="accText" id="accText" placeholder="請輸入帳號" />
+                    <label for="passText">Password:</label>
+                    <input type="password" name="passText" id="passText" placeholder="請輸入密碼" />
+                    <label for="ckeckText"></label>
+                    <input type="password" name="ckeckText" id="ckeckText" placeholder="請確認密碼" />
+                </div>
+                <div data-role="fieldcontain"><!--電子信箱-->
+                    <label for="emailText">Email:</label>
+                    <input type="text" name="emailText" id="emailText" placeholder="請輸入email" />
+                </div>
+                <!--生日-->
+                <label for="birthRow">birthday:</label>
+                <div class="ui-grid-b">
+
+                    <div class="ui-block-a">
+                        <input type="text" name="birthYearText" id="birthYearText" placeholder="年" />
+                    </div>
+                    <div class="ui-block-b">
+                        <input type="text" name="birthMonthText" id="birthMonthText" placeholder="月" />
+                    </div>
+                    <div class="ui-block-c">
+                        <input type="text" name="birthDayText" id="birthDayText" placeholder="日" />
+                    </div>
+
+                </div>
+                <!--性別-->
+                <fieldset data-role="controlgroup">
+                    <legend>gender:</legend>
+                    <input type="radio" name="radioGender" id="radioMale" value="Male"/><label for="radioMale">Male</label>
+                    <input type="radio" name="radioGender" id="radioFemale" value="Female"/><label for="radioFemale">Female</label>
+                </fieldset>
+                <!--同意按鈕-->
+                <div data-role="fieldcontain">
+                    <label for="swtAgree">Do you agree Member Agreemant:</label>
+                    <select id="swtAgree" name="swtAgree" data-role="slider" >
+                        <option value="disagree">no</option>
+                        <option value="agree">yes</option>
+                    </select>
+                </div>
+                <!--註冊&取消按鈕-->
+                <div class="ui-grid-a">
+                    <div class="ui-block-a"><input type="submit" name="btnOK" value="OK" /></div>
+                    <div class="ui-block-b"><input type="submit" name="btnCancel" value="Cancel" /></div>
+                </div>
+
+            </form>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h1>Design by Tseng Yan Yu</h1>
+        </div>
+    </div>
+</body>
+</html>
+
